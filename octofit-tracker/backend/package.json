@@ -2,12 +2,13 @@
   "name": "octofit-tracker-backend",
   "version": "1.0.0",
   "description": "OctoFit Tracker API Server",
-  "main": "dist/server.js",
+  "main": "dist/index.js",
   "type": "module",
   "scripts": {
-    "dev": "node --loader tsx src/server.ts",
+    "dev": "node --loader tsx src/index.ts",
+    "start": "node dist/index.js",
     "build": "tsc",
-    "start": "node dist/server.js",
+    "seed": "node --loader tsx src/scripts/seedDatabase.ts",
     "lint": "eslint src --ext ts"
   },
   "keywords": ["fitness", "tracker", "octofit"],
